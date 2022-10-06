@@ -132,23 +132,23 @@ function init() {
     plrObj = fbx
   });
 
-  function createPanel() {
-    const panel = new GUI({ width: 300 });
+  // function createPanel() {
+  //   const panel = new GUI({ width: 300 });
 
-    const cameraFolder = panel.addFolder('Camera');
+  //   const cameraFolder = panel.addFolder('Camera');
 
-    const settings = {
-      'Camera X': 0,
-      'Camera Y': 20,
-      'Camera Z': -25
-    }
+  //   const settings = {
+  //     'Camera X': 0,
+  //     'Camera Y': 20,
+  //     'Camera Z': -25
+  //   }
 
-    cameraFolder.add(settings, 'Camera X').onChange(function (pos) {camPos.x = pos})
-    cameraFolder.add(settings, 'Camera Y').onChange(function (pos) {camPos.y = pos})
-    cameraFolder.add(settings, 'Camera Z').onChange(function (pos) {camPos.z = pos})
-  }
+  //   cameraFolder.add(settings, 'Camera X').onChange(function (pos) {camPos.x = pos})
+  //   cameraFolder.add(settings, 'Camera Y').onChange(function (pos) {camPos.y = pos})
+  //   cameraFolder.add(settings, 'Camera Z').onChange(function (pos) {camPos.z = pos})
+  // }
 
-  createPanel()
+  // createPanel()
 
   window.setInterval(function() {
     if (keys.w == true) {
