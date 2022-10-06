@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js';
-import { GUI } from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/libs/lil-gui.module.min.js';
+// import { GUI } from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/libs/lil-gui.module.min.js';
 import { Vector3 } from 'https://cdn.jsdelivr.net/npm/three@0.118/src/math/Vector3.js';
 import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/loaders/FBXLoader.js';
 
@@ -10,7 +10,7 @@ let amountFriction = 0.05
 let amountStart = 0.05
 let velMeter = 0
 
-let maxVel = 3
+let maxVel = 5
 
 let keys = {}
 
@@ -44,33 +44,33 @@ function init() {
   //The actual scene
   scene = new THREE.Scene();
 
-  const dLight = new THREE.DirectionalLight(0xFFFFFF);
-  dLight.position.set(100, 100, 100);
-  dLight.target.position.set(0, 0, 0);
-  dLight.castShadow = true;
-  dLight.shadow.bias = -0.01;
-  dLight.shadow.mapSize.width = 2048;
-  dLight.shadow.mapSize.height = 2048;
-  dLight.shadow.camera.near = 1.0;
-  dLight.shadow.camera.far = 500;
-  dLight.shadow.camera.left = 200;
-  dLight.shadow.camera.right = -200;
-  dLight.shadow.camera.top = 200;
-  dLight.shadow.camera.bottom = -200;
-  scene.add(dLight);
+  // const dLight = new THREE.DirectionalLight(0xFFFFFF);
+  // dLight.position.set(100, 100, 100);
+  // dLight.target.position.set(0, 0, 0);
+  // dLight.castShadow = true;
+  // dLight.shadow.bias = -0.01;
+  // dLight.shadow.mapSize.width = 2048;
+  // dLight.shadow.mapSize.height = 2048;
+  // dLight.shadow.camera.near = 1.0;
+  // dLight.shadow.camera.far = 500;
+  // dLight.shadow.camera.left = 200;
+  // dLight.shadow.camera.right = -200;
+  // dLight.shadow.camera.top = 200;
+  // dLight.shadow.camera.bottom = -200;
+  // scene.add(dLight);
 
-  const aLight = new THREE.AmbientLight(0x404040);
-  scene.add(aLight);
+  // const aLight = new THREE.AmbientLight(0x404040);
+  // scene.add(aLight);
 
-  // const controls = new OrbitControls(cam, renderer.domElement);
-  // controls.target.set(0, 20, 0);
-  // controls.update();
+  // // const controls = new OrbitControls(cam, renderer.domElement);
+  // // controls.target.set(0, 20, 0);
+  // // controls.update();
 
-  function ucs() {
-    // controls.update();
-  }
+  // function ucs() {
+  //   // controls.update();
+  // }
 
-  //load background
+  // //load background
   const bgloader = new THREE.CubeTextureLoader();
   const texture = bgloader.load([
     './resources/skybox/px.jpg',
