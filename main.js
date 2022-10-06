@@ -101,10 +101,11 @@ function init() {
       color: 0x808080
     })
   );
-  box.position.set(0, 100, 0);
+  box.position.set(0, 10, 0);
   box.castShadow = true;
   box.recieveShadow = true;
   scene.add(box)
+  plrObj = box
 
   window.addEventListener("keydown", function(e) {
     keys[e.key] = true
@@ -129,7 +130,7 @@ function init() {
     //   idle.play()
     // });
     scene.add(fbx)
-    plrObj = fbx
+    // plrObj = fbx
   });
 
   // function createPanel() {
