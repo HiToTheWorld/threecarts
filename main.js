@@ -114,24 +114,24 @@ function init() {
     keys[e.key] = false
   })
 
-  const fbxloader = new FBXLoader();
-  fbxloader.setPath('./resources/models/jumpsuit/');
-  fbxloader.load('jumpsuit.fbx', function(fbx) {
-    fbx.scale.setScalar(0.1);
-    fbx.traverse(c => {
-      c.castShadow = true;
-    });
+  // const fbxloader = new FBXLoader();
+  // fbxloader.setPath('./resources/models/jumpsuit/');
+  // fbxloader.load('jumpsuit.fbx', function(fbx) {
+  //   fbx.scale.setScalar(0.1);
+  //   fbx.traverse(c => {
+  //     c.castShadow = true;
+  //   });
 
-    // const animLoader = new FBXLoader();
-    // animLoader.setPath('./recources/models/jumpsuit');
-    // animLoader.load('dance.fbx', function(anim) {
-    //   const mixer = THREE.AnimationMixer(fbx);
-    //   const idle = mixer.clipAnimation(anim.animations[0]);
-    //   idle.play()
-    // });
-    scene.add(fbx)
-    // plrObj = fbx
-  });
+  //   // const animLoader = new FBXLoader();
+  //   // animLoader.setPath('./recources/models/jumpsuit');
+  //   // animLoader.load('dance.fbx', function(anim) {
+  //   //   const mixer = THREE.AnimationMixer(fbx);
+  //   //   const idle = mixer.clipAnimation(anim.animations[0]);
+  //   //   idle.play()
+  //   // });
+  //   scene.add(fbx)
+  //   // plrObj = fbx
+  // });
 
   // function createPanel() {
   //   const panel = new GUI({ width: 300 });
