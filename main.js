@@ -10,7 +10,7 @@ let amountFriction = 0.05
 let amountStart = 0.05
 let velMeter = 0
 
-let maxVel = 5
+let maxVel = 3
 
 let keys = {}
 
