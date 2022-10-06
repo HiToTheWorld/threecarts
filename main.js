@@ -14,7 +14,7 @@ let maxVel = 5
 
 let keys = {}
 
-let camPos = {x: 0, y: 20, z: -25}
+let camPos = {x: 0, y: 35, z: -40}
 
 function init() {
   //The renderer that renders the scene
@@ -206,11 +206,9 @@ function reqAnimFrame() {
 }
 
 function updateCamPos() {
-  const cameraOffset = new Vector3(camPos.x, camPos.y, camPos.z);
-
-  const objectPosition = new Vector3();
-  plrObj.getWorldPosition(objectPosition);
-
-  cam.position.copy(objectPosition).add(cameraOffset);
+  cam.rotation = box.rotation
+  cam.translateX(camPos.x)
+  cam.translateY(camPos.y)
+  cam.translateZ(camPos.z)
   cam.lookAt(plrObj.position)
 }
