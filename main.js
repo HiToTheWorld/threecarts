@@ -44,23 +44,23 @@ function init() {
   //The actual scene
   scene = new THREE.Scene();
 
-  // const dLight = new THREE.DirectionalLight(0xFFFFFF);
-  // dLight.position.set(100, 100, 100);
-  // dLight.target.position.set(0, 0, 0);
-  // dLight.castShadow = true;
-  // dLight.shadow.bias = -0.01;
-  // dLight.shadow.mapSize.width = 2048;
-  // dLight.shadow.mapSize.height = 2048;
-  // dLight.shadow.camera.near = 1.0;
-  // dLight.shadow.camera.far = 500;
-  // dLight.shadow.camera.left = 200;
-  // dLight.shadow.camera.right = -200;
-  // dLight.shadow.camera.top = 200;
-  // dLight.shadow.camera.bottom = -200;
-  // scene.add(dLight);
+  const dLight = new THREE.DirectionalLight(0xFFFFFF);
+  dLight.position.set(100, 100, 100);
+  dLight.target.position.set(0, 0, 0);
+  dLight.castShadow = true;
+  dLight.shadow.bias = -0.01;
+  dLight.shadow.mapSize.width = 2048;
+  dLight.shadow.mapSize.height = 2048;
+  dLight.shadow.camera.near = 1.0;
+  dLight.shadow.camera.far = 500;
+  dLight.shadow.camera.left = 200;
+  dLight.shadow.camera.right = -200;
+  dLight.shadow.camera.top = 200;
+  dLight.shadow.camera.bottom = -200;
+  scene.add(dLight);
 
-  // const aLight = new THREE.AmbientLight(0x404040);
-  // scene.add(aLight);
+  const aLight = new THREE.AmbientLight(0x404040);
+  scene.add(aLight);
 
   // // const controls = new OrbitControls(cam, renderer.domElement);
   // // controls.target.set(0, 20, 0);
@@ -206,7 +206,7 @@ function reqAnimFrame() {
 }
 
 function updateCamPos() {
-  const cameraOffset = new Vector3(0, 20, -20);
+  const cameraOffset = new Vector3(camPos.x, camPos.y, camPos.z);
 
   const objectPosition = new Vector3();
   plrObj.getWorldPosition(objectPosition);
